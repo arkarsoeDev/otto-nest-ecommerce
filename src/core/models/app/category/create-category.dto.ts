@@ -1,0 +1,15 @@
+import { IsNotEmpty, IsString } from "class-validator"
+
+export class CreateCategoryDto {
+  @IsNotEmpty()
+  @IsString()
+  name: string
+
+  @IsNotEmpty()
+  @IsString()
+  billboardId: string
+
+  @IsNotEmpty()
+  @IsString()
+  storeId: string
+}
