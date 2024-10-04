@@ -14,7 +14,7 @@ export class StripeController {
 
   @Post("checkout")
   async checkoutOrder(@Body() body: CheckoutDto, @Request() req): Promise<{ url: string }> {
-    return await this.stripeService.checkout({ ...body, userId: req.user.userId })
+    return await this.stripeService.checkout({ ...body })
   }
 
   @Public()
